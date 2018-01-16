@@ -1,0 +1,10 @@
+<div ng-app="myProducts" ng-controller="ProductDetailsController">
+    <div id="Products" class="col-md-5" ng-repeat="item in products|filter:search|filter:priceFilter|orderBy:sortColumn">
+                            <div>
+                                <p><img ng-src="{{item.image}}"/></p><p><span></span>Name: {{item.name}}</p>
+                                    <p><span></span>Price: {{item.cost|currency:"INR "}}</p><p><span></span>Rating: {{item.rating}}</p>
+                            </div>
+    </div>
+    <div>
+        <a ui-sref="Home">Back to Products Page</a></div>
+</div>
